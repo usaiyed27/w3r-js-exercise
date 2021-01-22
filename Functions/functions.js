@@ -28,3 +28,15 @@ function findPalindrome(str){
 }
 
 console.log(findPalindrome('Amore, Roma'));
+
+function strCapitalize(str){
+    let arr = [];
+    arr = str.split(' ');
+	for(let i = 0; i<arr.length; i++){
+		for(let j = 0; j<arr[i].length; j++){
+ 			arr[i] = arr[i].slice(0,1).toUpperCase().concat(arr[i][j+1]);
+			str = arr.join('');
+		}
+	}
+return str;
+}
