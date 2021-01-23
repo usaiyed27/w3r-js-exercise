@@ -35,13 +35,14 @@ console.log(findPalindrome('Amore, Roma'));
 //Expected Output : 'The Quick Brown Fox '
 
 function strCapitalize(str){
-    let arr = [];
-    str = str.split(' ');
+    let arr = [], newarray = [];
+    arr = str.split(' ');
 
-	for(let i = 0; i<str.length; i++){
-			arr.push(str[i].slice(0,1).toUpperCase() + str[i].slice(1));		
-	}
-	str = arr.join(' ');
+	arr.map(function(word){
+			word = word.slice(0,1).toUpperCase() + word.slice(1);	
+			newarray.push(word);	
+	});
+	str = newarray.join(' ');
 	return str;
 }
 
