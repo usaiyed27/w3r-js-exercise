@@ -42,8 +42,7 @@ function strCapitalize(str){
 			word = word.slice(0,1).toUpperCase() + word.slice(1);	
 			newarray.push(word);	
 	});
-	str = newarray.join(' ');
-	return str;
+	return newarray.join(' ');
 }
 
 strCapitalize('the quick brown fox');
