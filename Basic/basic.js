@@ -9,9 +9,10 @@ function todayDate(){
 	let hours = date.getHours();
 	let minutes = date.getMinutes();
 	let seconds = date.getSeconds();
+	let prepand = (hours <= 12) ? 'AM':'PM'
 
 	console.log('Today is:' + day);
-	console.log('Current time is:' + hours + ' PM:' + minutes + ':' + seconds);
+	console.log('Current time is:' + hours + ' ' + prepand + ':' + minutes + ':' + seconds);
 }
 
 todayDate();
