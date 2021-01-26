@@ -12,3 +12,4 @@ function deleteProp(obj){
 }
 
 console.log(deleteProp(student));
+
