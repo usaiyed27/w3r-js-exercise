@@ -23,18 +23,33 @@
 //the program will display a message "Good Work"
 // otherwise display a message "Not matched". 
 
-function guessTheNumber(min,max){
-	min = Math.ceil(min);
-	max = Math.floor(max);
-	let randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
-	console.log(randomNumber);
+// function guessTheNumber(min,max){
+// 	min = Math.ceil(min);
+// 	max = Math.floor(max);
+// 	let randomNumber = Math.floor(Math.random() * (max - min + 1) + min);
+// 	console.log(randomNumber);
 
-	let userInput = +prompt('Enter your number');
+// 	let userInput = +prompt('Enter your number');
 
-	if(randomNumber === userInput){
-		return 'Good work';
-	}else{
-		return 'Not matched';
+// 	if(randomNumber === userInput){
+// 		return 'Good work';
+// 	}else{
+// 		return 'Not matched';
+// 	}
+// }
+
+
+//9. Write a JavaScript program to calculate days 
+//left until next Christmas. 
+
+function calculateDays(){
+	today = new Date();
+	var cmas = new Date(today.getFullYear(), 11, 25);
+	if(today.getMonth()==11 && today.getDate > 25){
+		cmas.setFullYear(cmas.getFullYear() + 1);
 	}
+	var one_day = 1000*60*60*24;
+	console.log(Math.ceil((cmas.getTime() - today.getTime())/(one_day)));
 }
 
+calculateDays();
